@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  defineProps<{ test: string }>()
+  defineProps<{ testText: string }>()
 </script>
 <template>
-  <h1>404 not found{{ test }}</h1>
+  <h1>404 not found{{ testText }}</h1>
 </template>
 <style>
   .menu {

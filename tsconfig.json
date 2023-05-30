@@ -16,10 +16,22 @@
       "dom.iterable",
       "scripthost"],
     "types": ["vite/client"],
-    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }]
+    "plugins": [{ "name": "@vuedx/typescript-plugin-vue" }],
+    "outDir": "./built",
+    "allowJs": true,
+    "allowUnreachableCode": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "typeRoots": [ "./typings" ],
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": [
-    "node_modules"
-  ]
+    "node_modules",
+    "./plugins/**/*",
+    "./typings/**/*",
+    "./built/**/*"
+  ],
+  "main": "./dist/lib/library.umd.js",
+  "module": "./dist/lib/library.es.js",
+  "typings": "./dist/types/main.d.ts",
 }

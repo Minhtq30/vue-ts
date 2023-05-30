@@ -10,6 +10,6 @@
 </script>
 <template>
   <h1>This is home page</h1>
-  <ErrorCom test="1" />
+  <ErrorCom test-text="1" />
 </template>
 <style></style>
